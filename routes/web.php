@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/parser', 'ParserController@index')->name('parser.test');
-Route::post('/parser', 'ParserController@parser')->name('parser.post');
+Route::get('/parser/test', 'ParserController@index')->name('parser.test');
+Route::get('/parser/run', 'ParserController@parser')->name('parser.run');
 Route::get('/parser/{id}', 'ParserController@parseOne')->name('parser.one');
